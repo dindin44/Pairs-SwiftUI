@@ -13,17 +13,25 @@ class Deck: ObservableObject {
     var cardParts = [CardPart]()
     
     init() {
+        startGame()
+    }
+    
+    private func startGame() {
         let selectedCards = allCards.shuffled().prefix(12)
         for card in selectedCards {
             cardParts.append(CardPart(id: card.id, text: card.a))
             cardParts.append(CardPart(id: card.id, text: card.b))
         }
-        
         cardParts.shuffle()
     }
     
     func set(_ index: Int, to state: CardState) {
         cardParts[index].state = state
         objectWillChange.send()
+    }
+    
+    func reset() {
+        cardParts.removeAll()
+        startGame()
     }
 }

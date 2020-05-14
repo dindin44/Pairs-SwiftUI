@@ -83,7 +83,6 @@
 				A3ADDF14246D957100CEBC04 /* Models */,
 				A3ADDF13246D954B00CEBC04 /* Resources */,
 				A334974E246B4E98003E53CA /* AppDelegate.swift */,
-				A3349750246B4E98003E53CA /* ContentView.swift */,
 				A334975A246B4E99003E53CA /* Info.plist */,
 				A334975B246B4E99003E53CA /* Pairs.entitlements */,
 				A3349754246B4E99003E53CA /* Preview Content */,
@@ -124,6 +123,7 @@
 		A3ADDF19246D95DF00CEBC04 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A3349750246B4E98003E53CA /* ContentView.swift */,
 				A3ADDF1A246D960200CEBC04 /* CardView.swift */,
 				A3ADDF20246D965A00CEBC04 /* CardBack.swift */,
 				A3ADDF22246D967300CEBC04 /* CardFront.swift */,
