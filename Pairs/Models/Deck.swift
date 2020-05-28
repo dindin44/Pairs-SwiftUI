@@ -10,7 +10,7 @@ import Foundation
 
 class Deck: ObservableObject {
     let allCards: [Card] = Bundle.main.decode("capitals.json")
-    var cardParts = [CardPart]()
+    @Published var cardParts = [CardPart]()
     
     init() {
         startGame()
@@ -27,7 +27,6 @@ class Deck: ObservableObject {
     
     func set(_ index: Int, to state: CardState) {
         cardParts[index].state = state
-        objectWillChange.send()
     }
     
     func reset() {
